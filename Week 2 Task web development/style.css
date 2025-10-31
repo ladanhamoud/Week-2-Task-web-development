@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+
+:root {
+    --accent: #2563eb;
+    --accent: #2563eb;
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, .1);
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    padding: 0px 40px;
+}
+
+header .logo {
+    display: flex;
+}
+
+header .logo h1 {
+    font-size: 20px;
+    padding-top: 20px;
+    color: var(--green);
+    font-weight: bold;
+}
+
+
+header .logo img {
+    width: 50px;
+}
+
+header nav a {
+    font-size: 18px;
+    padding: 0px 20px;
+    color: var(--green);
+    padding-top: 20px;
+}
+
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+header .icon {
+    padding: 10px;
+    font-size: 20px;
+    margin: 0px 5px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+
+/* Home */
+
+.Hero {
+    background: url('images/bacground.png') center/cover no-repeat;
+    height: 550px;
+}
+
+.Hero .text {
+    text-align: center;
+    padding-top: 200px;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+    margin: auto;
+    position: relative;
+    top: 150px;
+}
+
+.Hero .text h1 {
+    position: relative;
+    bottom: 130px;
+    font-size: 2.5em;
+}
+
+.Hero .text button {
+    background-color: var(--green);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    bottom: 100px;
+    font-size: 1em;
+}
+
+.Hero .text button:hover {
+    background-color: var(--accent);
+    letter-spacing: 3px;
+}
+
+/* Products */
+.ciwan h1 {
+    font-size: 2em;
+    text-align: center;
+    padding: 50px 0px;
+    color: #27ae60;
+}
+
+
+.search-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ✅ Product Grid Responsive Layout */
+.product-list {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    /* default: mobile view */
+}
+
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: var(--accent);
+}
+
+
+
+/* About */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 30px;
+}
+
+.about .left {
+    padding: 60px 0px;
+}
+
+.about .left img {
+    width: 450px;
+
+}
+
+.about .right {
+    margin-left: 30px;
+    margin-top: 55px;
+}
+
+.about .right h1 {
+    font-size: 2em;
+    color: var(--green);
+
+}
+
+.about .right p {
+    padding-top: 15px;
+    color: var(--light-color);
+    line-height: 1.5;
+}
+
+.about .right button {
+    background-color: var(--green);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+}
+
+.about .right button:hover {
+    background-color: var(--accent);
+    letter-spacing: 3px;
+}
+
+
+/* === Contact Card === */
+.contact-card {
+    background: var(--card);
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+.contact-card h1 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 10px;
+    color: var(--green);
+}
+
+.contact-card p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* === Form === */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+.btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+}
+
+.btn:hover {
+    background: var(--accent);
+}
+
+
+
+/* === Footer === */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #2e8b57;
+    /* brand color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 16px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#backToTop:hover {
+    background-color: #256b45;
+}
+
+
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: var(--light-color);
+    margin-top: 60px;
+    color: white;
+    text-align: center;
+}
+
+footer .links {
+    padding: 30px 0px;
+}
+
+footer .links i {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+    color: black;
+    margin: 0px 5px;
+}
+
+footer .links i:hover {
+    background-color: var(--green);
+    color: white;
+    transform: rotate(360deg);
+}
+
+footer nav a {
+    padding: 20px;
+    color: white;
+}
+
+footer .copy p {
+    padding-top: 40px;
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* HAMBURGER ICON HIDDEN BY DEFAULT (DESKTOP) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--green);
+}
+
+/* --- TABLET RESPONSIVE --- */
+@media (max-width: 1024px) {
+    header {
+        padding: 0px 20px;
+        height: 90px;
+    }
+
+    header nav a {
+        font-size: 16px;
+        padding: 0px 10px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .left img {
+        width: 90%;
+    }
+
+    .contact {
+        left: 0;
+        margin: 0 auto;
+    }
+
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+    }
+
+    header nav a {
+        display: block;
+        padding: 15px 0;
+        border-top: 1px solid #f1f1f1;
+    }
+
+    .Hero {
+        height: 400px;
+        background-position: center;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about .left img {
+        width: 100%;
+    }
+
+    .contact {
+        width: 90%;
+        left: 0;
+        margin: 0 auto;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    footer {
+        height: auto;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* --- HAMBURGER MENU ONLY CSS --- */
+
+/* hide checkbox itself */
+#menu-toggle {
+    display: none;
+}
+
+/* hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--green);
+}
+
+/* nav default hidden on mobile */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    header nav a {
+        display: block;
+        padding: 15px 0;
+        border-top: 1px solid #f1f1f1;
+    }
+
+    header .icon {
+        display: block;
+        background: none;
+        position: relative;
+        right: 50px;
+        top: 10px;
+    }
+
+    .Hero .text {
+        text-align: center;
+        padding-top: 200px;
+        background-color: rgb(255, 255, 255, 0.7);
+        border-radius: 10px;
+        width: 400px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        bottom: 100px;
+    }
+
+    /* show hamburger icon on mobile */
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 35px;
+    }
+
+    /* checkbox checked -> show nav */
+    #menu-toggle:checked+.hamburger+nav {
+        display: flex;
+    }
+
+    .product img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-card {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 600px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop - 4 columns */
+@media (min-width: 992px) {
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

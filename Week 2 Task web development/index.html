@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <!-- <i class="fa-brands fa-apple"></i> -->
+            <img src="images/logo.png" alt="">
+            <h1>HamiMiniMarket</h1>
+        </div>
+        <!-- checkbox for hamburger control -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- hamburger icon -->
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="Hero">
+        <div class="text">
+            <h1>Fresh Fruits</h1>
+            <button>Shop Now <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        </div>
+    </section>
+    <div class="ciwan">
+        <h1>Our Products</h1>
+    </div>
+    <section class="search-filter">
+        <input type="text" id="search" placeholder="Search for a product...">
+
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="fruit">Fruits</option>
+            <option value="vegetable">Vegetables</option>
+        </select>
+
+        <select id="price-filter">
+            <option value="all">All Prices</option>
+            <option value="5">Below $5</option>
+            <option value="10">Below $10</option>
+            <option value="15">Below $15</option>
+        </select>
+    </section>
+
+    <section class="product-list" id="product-list">
+        <!-- Products will appear here using JS -->
+    </section>
+
+    <section class="about">
+        <div class="left">
+            <img src="images/about.png" alt="">
+        </div>
+
+        <div class="right">
+            <h1>About Us</h1>
+            <p> Welcome to <strong style="color: #27ae60;">Hami MiniMarket</strong> — your trusted community shop
+                for fresh and healthy fruits & vegetables. <br>
+                We are committed to providing high-quality, locally sourced produce
+                to keep you and your <br>family healthy every day. <br>
+                <button>View More <i class="fa-solid fa-arrow-right"></i></button>
+            </p>
+        </div>
+    </section>
+
+    <div class="contact-card">
+        <h1>Contact Me</h1>
+
+
+
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully (demo)')">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Enter your full name" required>
+
+
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+
+
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+
+            <button class="btn" type="submit">Send Message</button>
+        </form>
+
+
+    </div>
+    <button id="backToTop">⬆</button>
+    <footer>
+        <div class="links">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="copy">
+            <p>Copyright@2025; All rights reserved by <strong>Hami MiniMarket</strong> </p>
+        </div>
+    </footer>
+    <script src="App.js"></script>
+</body>
+
+</html>
